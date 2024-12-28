@@ -1,17 +1,27 @@
 package tree
 
 import (
-	"fmt"
 	"testing"
+
+	"github.com/GirigiriG/DST/adt"
 )
 
 func TestTreeInsert(t *testing.T) {
-	data := []int{}
-	
-	root := &node{value: 5}
-	Insert(root, 3)
-	Insert(root, 7)
-	Insert(root, 6)
-	fmt.Println(root.right.left)
+	data := []int{5, 3, 7, 6}
+	root := &adt.Node{Value: 5}
 
+	for _, v := range data[1:] {
+		Insert(root, v)
+	}
+}
+
+func TestPreOrder(t *testing.T) {
+	data := []int{5, 3, 4, 7, 6, 9}
+	root := &adt.Node{Value: 5}
+
+	for _, v := range data[1:] {
+		Insert(root, v)
+	}
+
+	PreOrder(root)
 }
