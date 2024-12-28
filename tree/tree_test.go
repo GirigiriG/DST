@@ -23,5 +23,5 @@ func TestPreOrder(t *testing.T) {
 		Insert(root, v)
 	}
 
-	PreOrder(root)
+	LevelOrderTraversal(root)
 }

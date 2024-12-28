@@ -23,7 +23,7 @@ func Insert(root *adt.Node, data int) *adt.Node {
 	return root
 }
 
-func PreOrder(root *adt.Node) {
+func LevelOrderTraversal(root *adt.Node) {
 	q := queue.NewQueue()
 	q.Enqueue(root)
 
